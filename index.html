@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IncogniTalk</title>
+	<link rel="icon" type="image/png" href="img/icon.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="stylesheet/less" type="text/css" href="style/epsile.less">
+	<script>
+		var less = {
+			env: "development"
+		};
+	</script>
+	<script src="js/lib/less-1.7.0.min.js"></script>
+</head>
+<body>
+
+<section id="container">
+	<section id="chatWindow">
+		<section id="chatMain">		
+			<div id="chatMainDiv"></div>
+		</section>
+		<div id="isTypingDiv" class="consoleChat">Stranger&nbsp;is&nbsp;typing...</div>
+		<section id="panelRow">
+			<input type=button value="Disconnect" id="disconnectButton" disabled>
+			<div id="chatAreaWrap">
+				<textarea id="chatArea" disabled="disabled"></textarea>
+			</div>
+		</section>
+		<button onclick="document.location='index.html'">End</button>
+		<section id="peopleOnlineSection">
+			<span id="peopleOnlineSpan">0</span> online
+		</section>
+	</section>
+	<div class="topnav">
+		<img src="img/icon.png">
+		<span style="font-family: Audiowide, sans-serif;">IncogniTalk</span>
+		<a href="about.html">About</a>
+		<a href="terms and condition.html">Terms and Condition</a>
+		<a class="active" href="index.html">Home</a>
+	</div>
+	<section id="welcomeScreen">
+		
+		<section id="startButtonDiv"><div>
+			<div class="popup">
+				<button id="close">Confirm</button>
+				<h2>Warning!</h2>
+				<p>
+					For safety reasons, this website is age-restricted and only meant for users<br>
+					 who are at least 16 years old and no older than 24. By using our website,<br>
+					  you certify that you are the legal age specified.
+
+				</p></div>
+			<div id="description">
+				Lonely and having trouble sharing your thoughts, emotions, confessions, hidden crushes, adult jokes and<br> 
+				conversations without the eye popping reactions of friends and family ? No worries! IncogniTalk<br>
+				 - a truly anonymous and secure instant messaging application will always be by your side no<br> 
+				 matter what you’re up to. Chat about your day, share and discover secrets, gossip freely, and<br> 
+				 so much more without losing anonymity.
+			</div>
+			<br><br><br>
+			<input type=button value="Start chatting!" onclick="Epsile.startChat();" class="button" id="startButton" disabled>
+		</div></section>
+		<footer>
+			
+		</footer>
+	
+	</section>
+</section>
+
+<audio id="alertSound">
+	<source src="media/alert.ogg" />
+	<source src="media/alert.mp3" />
+</audio>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/epsile.js"></script>
+<script src="js/popup.js"></script>
+</body>
+</html>
